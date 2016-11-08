@@ -1,0 +1,2 @@
+// PEOPLE
+export const GET_PEOPLE_LIST = 'GET_PEOPLE_LIST';
