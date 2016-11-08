@@ -24,7 +24,7 @@ class Header extends React.Component {
             <nav className="main-menu">
               <ul>
                 <li>
-                  <Link activeClassName="-current" to={`/${this.props.lang}`}>{this.context.t('home')}</Link>
+                  <Link to={`/${this.props.lang}`}>{this.context.t('home')}</Link>
                 </li>
                 <li>
                   <Link activeClassName="-current" to={`/${this.props.lang}/people`}>{this.context.t('people')}</Link>

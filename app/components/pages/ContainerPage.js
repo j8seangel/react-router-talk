@@ -13,8 +13,7 @@ class ContainerPage extends React.Component {
   }
 
   componentWillMount() {
-    const lang = this.props.params.lang || 'en';
-    this.props.updateLang(lang);
+    this.props.updateLang(this.props.lang);
   }
 
   render() {
@@ -36,26 +35,18 @@ ContainerPage.childContextTypes = {
 };
 
 ContainerPage.propTypes = {
-  /**
-  * Define required content for page
-  **/
+  /* Define required content for page */
   children: React.PropTypes.element.isRequired,
-  /**
-  * Define function to update the language
-  **/
+  /* Define function to update the language */
   updateLang: React.PropTypes.func.isRequired,
-  /**
-  * Finds the router params
-  **/
+  /* Finds the router params */
   params: React.PropTypes.object,
-  /**
-  * Finds the route of current location in URL
-  **/
+  /* Finds the route of current location in URL */
   location: React.PropTypes.object,
-  /**
-  * Finds route pathname string for current location
-  **/
-  path: React.PropTypes.string
+  /* Finds route pathname string for current location */
+  path: React.PropTypes.string,
+  /* Define the lang selected, 'en' by default */
+  lang: React.PropTypes.string.isRequired
 };
 
 export default ContainerPage;
