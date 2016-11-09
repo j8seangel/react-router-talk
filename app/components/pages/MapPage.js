@@ -1,11 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 class PeoplePage extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   randomName() {
     let text = '';

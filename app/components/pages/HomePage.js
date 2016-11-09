@@ -1,23 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router';
+import NavLink from 'containers/common/NavLink';
 
-function HomePage(props, context) {
+function HomePage() {
   return (
     <div className="row">
       <div className="column">
         <p>Hi !</p>
-        <Link to={`/${props.lang}/team`}>{context.t('seeTeam')}</Link>
+        <NavLink to="/team" i18nText="seeTeam" />
       </div>
     </div>
   );
 }
-
-HomePage.contextTypes = {
-  t: React.PropTypes.func.isRequired
-};
-
-HomePage.propTypes = {
-  lang: React.PropTypes.string.isRequired
-};
 
 export default HomePage;

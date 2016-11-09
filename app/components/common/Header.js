@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import NavLink from 'containers/common/NavLink';
 import Select from 'react-select';
 import { translations } from 'locales/translations';
 
@@ -24,13 +24,13 @@ class Header extends React.Component {
             <nav className="main-menu">
               <ul>
                 <li>
-                  <Link to={`/${this.props.lang}`}>{this.context.t('home')}</Link>
+                  <NavLink to="/" i18nText="home" />
                 </li>
                 <li>
-                  <Link activeClassName="-current" to={`/${this.props.lang}/team`}>{this.context.t('team')}</Link>
+                  <NavLink to="/team" i18nText="team" />
                 </li>
                 <li>
-                  <Link activeClassName="-current" to={`/${this.props.lang}/map`}>{this.context.t('map')}</Link>
+                  <NavLink to="/map" i18nText="map" />
                 </li>
               </ul>
             </nav>
@@ -51,11 +51,6 @@ class Header extends React.Component {
     );
   }
 }
-
-Header.contextTypes = {
-  // Define function to get the translations
-  t: React.PropTypes.func.isRequired
-};
 
 Header.propTypes = {
   // Define the language selected

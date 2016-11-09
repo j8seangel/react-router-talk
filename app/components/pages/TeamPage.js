@@ -1,4 +1,5 @@
 import React from 'react';
+import NavLink from 'containers/common/NavLink';
 
 class PeoplePage extends React.Component {
   componentWillMount() {
@@ -15,7 +16,7 @@ class PeoplePage extends React.Component {
           {this.props.team.length > 0 &&
             this.props.team.map((item, index) => (
               <li key={index}>
-                <p>{item.name}</p>
+                <NavLink to={`/map?team=${item.alias}`} text={item.name} />
               </li>
             ))
           }
