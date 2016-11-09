@@ -24,7 +24,7 @@ class PeoplePage extends React.Component {
 
   render() {
     return !this.props.team.length
-      ? <p> Loading </p>
+      ? null
       : this.getContent();
   }
 }

@@ -3,14 +3,12 @@ export const translations = {
     'hi': 'Hi',
     'home': 'Home',
     'team': 'Team',
-    'seeTeam': 'See team',
-    'map': 'Map'
+    'goToTheTeam': 'Go to the team !'
   },
   es: {
     'hi': 'Hola',
     'home': 'Inicio',
     'team': 'Equipo',
-    'seeTeam': 'Ver equipo',
-    'map': 'Mapa',
+    'goToTheTeam': 'Ir al equipo !'
   },
 }
