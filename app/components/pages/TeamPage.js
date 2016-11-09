@@ -1,5 +1,6 @@
 import React from 'react';
-import NavLink from 'containers/common/NavLink';
+import TeamMap from 'containers/team/Map';
+import TeamLegend from 'containers/team/MapLegend';
 
 class PeoplePage extends React.Component {
   componentWillMount() {
@@ -7,28 +8,26 @@ class PeoplePage extends React.Component {
       this.props.getTeamList();
     }
   }
-  render() {
-    return (
-      <div className="row">
-        <div className="column">
-          <h2>{this.context.t('team')}</h2>
 
-          {this.props.team.length > 0 &&
-            this.props.team.map((item, index) => (
-              <li key={index}>
-                <NavLink to={`/map?team=${item.alias}`} text={item.name} />
-              </li>
-            ))
-          }
+  getContent() {
+    return (
+      <div className="row collapse">
+        <div className="l-map column small-12 medium-6">
+          <TeamMap />
+        </div>
+        <div className="l-legend column small-12 medium-6">
+          <TeamLegend />
         </div>
       </div>
     );
   }
-}
 
-PeoplePage.contextTypes = {
-  t: React.PropTypes.func.isRequired
-};
+  render() {
+    return !this.props.team.length
+      ? <p> Loading </p>
+      : this.getContent();
+  }
+}
 
 PeoplePage.propTypes = {
   getTeamList: React.PropTypes.func.isRequired,

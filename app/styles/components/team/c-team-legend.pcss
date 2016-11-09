@@ -1,0 +1,28 @@
+.c-team-legend {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  overflow: scroll;
+
+  .member {
+    position: relative;
+    height: 130px;
+    display: flex;
+    flex-basis: 20%;
+    background-size: cover;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    opacity: 0.6;
+    border: 2px solid $dark-color;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.-active {
+      box-shadow: inset 0px 0px 0px 1px $action-color;
+      opacity: 1;
+    }
+  }
+}

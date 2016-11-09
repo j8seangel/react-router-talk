@@ -10,6 +10,8 @@ function updateMapPageParams(state) {
   const team = state.location.query.team;
   if (team) {
     dispatch(updateTeamParams(team.split(',')));
+  } else {
+    dispatch(updateTeamParams([]));
   }
 }
 

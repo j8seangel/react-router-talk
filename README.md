@@ -2,6 +2,10 @@
 
 Talk about handling router states in react redux
 
+![RRRT](screenshot.jpg?raw=true "React router redux talk")
+
+Please vizzcrew, download and play with it !
+
 ## Contributing
 
 1. Fork it!

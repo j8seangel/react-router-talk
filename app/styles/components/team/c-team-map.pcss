@@ -1,0 +1,42 @@
+.c-team-map {
+  height: 100%;
+  background-color: #000;
+
+  .map-marker {
+    position: relative;
+
+    .icon {
+      display: block;
+      position: absolute;
+      top: -7px;
+      left: -7px;
+      width: 15px;
+      height: 15px;
+      background: url('/logovizz.png');
+      background-size: cover;
+    }
+  }
+
+  .leaflet-popup {
+    .leaflet-popup-content-wrapper {
+      background-color: $action-color;
+      border-radius: 0;
+
+      .leaflet-popup-content {
+        margin: 0;
+        width: 120px;
+      }
+    }
+
+    .leaflet-popup-tip-container {
+      .leaflet-popup-tip {
+        background-color: $action-color;
+        margin-top: -15px;
+      }
+    }
+
+    .leaflet-popup-close-button {
+      display: none;
+    }
+  }
+}

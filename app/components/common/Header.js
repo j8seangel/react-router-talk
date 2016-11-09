@@ -29,9 +29,6 @@ class Header extends React.Component {
                 <li>
                   <NavLink to="/team" i18nText="team" />
                 </li>
-                <li>
-                  <NavLink to="/map" i18nText="map" />
-                </li>
               </ul>
             </nav>
           </div>

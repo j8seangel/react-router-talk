@@ -9,7 +9,7 @@ export function updateTeamURL(params) {
     const query = params.length ? `?team=${params.join(',')}` : '';
 
     const lang = state().i18nState.lang;
-    dispatch(push(`/${lang}/map/${mapParams}${query}`));
+    dispatch(push(`/${lang}/team/${mapParams}${query}`));
   };
 }
 
@@ -23,14 +23,14 @@ export function updateTeamParams(data) {
 }
 
 export function getTeamList() {
-  const url = '/team.json';
+  const url = 'https://j8seangel.carto.com/api/v2/sql?q=SELECT *, ST_AsGeoJSON(the_geom) as latLng FROM vizz_team';
   return dispatch => {
     fetch(url)
       .then(response => response.json())
       .then(data => {
         dispatch({
           type: TEAM_GET_LIST,
-          payload: data
+          payload: data.rows
         });
       });
   };

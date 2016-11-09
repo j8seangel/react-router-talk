@@ -5,11 +5,11 @@ export function updateMapURL(params) {
   return (dispatch, state) => {
     const map = `${params.lat}/${params.lng}/${params.zoom}`;
 
-    const team = state().team.activeTeam;
+    const team = state().team.activeMembers;
     const query = team.length ? `?team=${team.join(',')}` : '';
 
     const lang = state().i18nState.lang;
-    dispatch(push(`/${lang}/map/${map}${query}`));
+    dispatch(push(`/${lang}/team/${map}${query}`));
   };
 }
 
