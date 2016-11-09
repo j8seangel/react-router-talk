@@ -5,9 +5,6 @@ import { setLanguage } from 'redux-i18n';
 const mapStateToProps = (state, { params }) => ({
   lang: params.lang
 });
-
-const mapDispatchToProps = (dispatch) => ({
-  setLanguage: lang => dispatch(setLanguage(lang))
-});
+const mapDispatchToProps = () => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContainerPage);

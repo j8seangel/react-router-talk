@@ -6,14 +6,11 @@ import { translations } from 'locales/translations';
 
 class ContainerPage extends React.Component {
 
+  // Example of how to save "things" in the context
   getChildContext() {
     const location = this.props.location;
     location.params = this.props.params;
     return { location };
-  }
-
-  componentWillMount() {
-    this.props.setLanguage(this.props.lang);
   }
 
   render() {
@@ -30,6 +27,7 @@ class ContainerPage extends React.Component {
   }
 }
 
+// Example of using context
 ContainerPage.childContextTypes = {
   location: React.PropTypes.object
 };
@@ -37,16 +35,10 @@ ContainerPage.childContextTypes = {
 ContainerPage.propTypes = {
   /* Define required content for page */
   children: React.PropTypes.element.isRequired,
-  /* Define function to update the language */
-  setLanguage: React.PropTypes.func.isRequired,
   /* Finds the router params */
   params: React.PropTypes.object,
   /* Finds the route of current location in URL */
-  location: React.PropTypes.object,
-  /* Finds route pathname string for current location */
-  path: React.PropTypes.string,
-  /* Define the lang selected, 'en' by default */
-  lang: React.PropTypes.string.isRequired
+  location: React.PropTypes.object
 };
 
 export default ContainerPage;
