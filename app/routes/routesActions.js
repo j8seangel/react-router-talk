@@ -3,7 +3,7 @@ import { updateMapParams } from 'actions/map';
 import { updateTeamParams } from 'actions/team';
 import { setLanguage } from 'redux-i18n';
 
-function updateMapPageParams(state) {
+function updateTeamPageParams(state) {
   if (state.params.lat && state.params.lng && state.params.zoom) {
     dispatch(updateMapParams(state.params));
   }
@@ -20,12 +20,12 @@ export function updateLanguage(actualState, replace, done) {
   done();
 }
 
-export function initMapPage(actualState, replace, done) {
-  updateMapPageParams(actualState);
+export function initTeamPage(actualState, replace, done) {
+  updateTeamPageParams(actualState);
   done();
 }
 
-export function updateMapPage(prevState, nextState, replace, done) {
-  updateMapPageParams(nextState);
+export function updateTeamPage(prevState, nextState, replace, done) {
+  updateTeamPageParams(nextState);
   done();
 }
