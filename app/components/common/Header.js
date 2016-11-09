@@ -13,7 +13,7 @@ class Header extends React.Component {
   }
 
   onSelectChange(lang) {
-    this.props.updateLang(lang.value);
+    this.props.updateLangURL(lang.value);
   }
 
   render() {
@@ -27,7 +27,10 @@ class Header extends React.Component {
                   <Link to={`/${this.props.lang}`}>{this.context.t('home')}</Link>
                 </li>
                 <li>
-                  <Link activeClassName="-current" to={`/${this.props.lang}/people`}>{this.context.t('people')}</Link>
+                  <Link activeClassName="-current" to={`/${this.props.lang}/team`}>{this.context.t('team')}</Link>
+                </li>
+                <li>
+                  <Link activeClassName="-current" to={`/${this.props.lang}/map`}>{this.context.t('map')}</Link>
                 </li>
               </ul>
             </nav>
@@ -57,8 +60,8 @@ Header.contextTypes = {
 Header.propTypes = {
   // Define the language selected
   lang: React.PropTypes.string.isRequired,
-  // Define the function to upadate the url after language change
-  updateLang: React.PropTypes.func.isRequired
+  // Define the function to upadate the url
+  updateLangURL: React.PropTypes.func.isRequired
 };
 
 export default Header;

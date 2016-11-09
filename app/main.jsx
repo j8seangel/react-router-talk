@@ -9,7 +9,7 @@ import { syncHistoryWithStore, routerReducer, routerMiddleware } from 'react-rou
 import { i18nState } from "redux-i18n"
 
 import * as reducers from 'reducers';
-import Routes from './Routes';
+import Routes from './routes/routes';
 
 import './styles/lib/custom-foundation.css';
 import 'react-select/dist/react-select.css';
@@ -62,3 +62,7 @@ render(
   </Provider>,
   document.getElementById('app')
 );
+
+export default function dispatch(action) {
+  store.dispatch(action)
+}

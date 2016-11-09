@@ -1,2 +1,6 @@
-// PEOPLE
-export const GET_PEOPLE_LIST = 'GET_PEOPLE_LIST';
+// TEAM
+export const TEAM_GET_LIST = 'TEAM_GET_LIST';
+export const TEAM_UPDATE_ACTIVE = 'TEAM_UPDATE_ACTIVE';
+
+// MAPS
+export const MAP_UPDATE_PARAMS = 'MAP_UPDATE_PARAMS';

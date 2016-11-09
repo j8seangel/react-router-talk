@@ -13,7 +13,7 @@ class ContainerPage extends React.Component {
   }
 
   componentWillMount() {
-    this.props.updateLang(this.props.lang);
+    this.props.setLanguage(this.props.lang);
   }
 
   render() {
@@ -38,7 +38,7 @@ ContainerPage.propTypes = {
   /* Define required content for page */
   children: React.PropTypes.element.isRequired,
   /* Define function to update the language */
-  updateLang: React.PropTypes.func.isRequired,
+  setLanguage: React.PropTypes.func.isRequired,
   /* Finds the router params */
   params: React.PropTypes.object,
   /* Finds the route of current location in URL */

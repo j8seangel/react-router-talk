@@ -6,7 +6,7 @@ function HomePage(props, context) {
     <div className="row">
       <div className="column">
         <p>Hi !</p>
-        <Link to={`/${props.lang}/people`}>{context.t('seePeople')}</Link>
+        <Link to={`/${props.lang}/team`}>{context.t('seeTeam')}</Link>
       </div>
     </div>
   );

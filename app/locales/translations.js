@@ -2,13 +2,13 @@ export const translations = {
   en: {
     'hi': 'Hi',
     'home': 'Home',
-    'people': 'People',
-    'seePeople': 'See people'
+    'team': 'Team',
+    'seeTeam': 'See team'
   },
   es: {
     'hi': 'Hola',
     'home': 'Inicio',
-    'people': 'Gente',
-    'seePeople': 'Ver gente'
+    'team': 'Equipo',
+    'seeTeam': 'Ver equipo'
   },
 }

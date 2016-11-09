@@ -2,18 +2,18 @@ import React from 'react';
 
 class PeoplePage extends React.Component {
   componentWillMount() {
-    if (!this.props.people.length) {
-      this.props.getPeopleList();
+    if (!this.props.team.length) {
+      this.props.getTeamList();
     }
   }
   render() {
     return (
       <div className="row">
         <div className="column">
-          <h2>{this.context.t('people')}</h2>
+          <h2>{this.context.t('team')}</h2>
 
-          {this.props.people.length > 0 &&
-            this.props.people.map((item, index) => (
+          {this.props.team.length > 0 &&
+            this.props.team.map((item, index) => (
               <li key={index}>
                 <p>{item.name}</p>
               </li>
@@ -30,8 +30,8 @@ PeoplePage.contextTypes = {
 };
 
 PeoplePage.propTypes = {
-  getPeopleList: React.PropTypes.func.isRequired,
-  people: React.PropTypes.array
+  getTeamList: React.PropTypes.func.isRequired,
+  team: React.PropTypes.array
 };
 
 export default PeoplePage;
